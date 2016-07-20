@@ -1,0 +1,17 @@
+--- orig_install.sh	2016-07-18 20:58:37.023631669 -0600
++++ install.sh	2016-07-18 18:11:37.151558801 -0600
+@@ -30,7 +30,7 @@
+ # ~/.meteor, replacing whatever is already there. (~/.meteor is only a cache of
+ # packages and package metadata; no personal persistent data is stored there.)
+ 
+-RELEASE="1.3.5.1"
++RELEASE="${1:-1.3.5.1}"
+ 
+ 
+ # Now, on to the actual installer!
+@@ -269,4 +269,4 @@
+ trap - EXIT
+ }
+ 
+-run_it
++run_it $@
